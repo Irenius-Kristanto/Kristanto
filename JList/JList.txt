@@ -1,0 +1,26 @@
+import java.awt.Dimension; 
+import javax.swing.JFrame; 
+import javax.swing.JList; 
+import javax.swing.JPanel; 
+import javax.swing.JScrollPane; 
+import javax.swing.ListSelectionModel; 
+
+public class HelloFrame extends JFrame  {     
+
+String languages[] = { "Java", "Perl", "Python","C++", "Basic", "C#" };
+     public HelloFrame()     {
+         this.setSize(1000,500);
+         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+         this.setTitle("Hello World!");
+         JPanel jp=new JPanel();
+         JList jlst = new JList(languages);
+         JScrollPane jsp=new JScrollPane(jlst);
+         jsp.setPreferredSize(new Dimension(100, 74));
+         jlst.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+         jp.add(jsp);         this.add(jp);
+         this.setVisible(true);     
+}     
+public static void main(String[] args)      {
+         HelloFrame hf=new HelloFrame();
+      }
+ } 

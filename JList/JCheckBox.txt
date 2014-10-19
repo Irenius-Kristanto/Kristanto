@@ -1,0 +1,28 @@
+import javax.swing.JCheckBox;
+import javax.swing.JFrame; 
+import javax.swing.JPanel; 
+public class HelloFrame extends JFrame  {
+     public HelloFrame()     {
+         this.setSize(1000,500);
+         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+         this.setTitle("Hello World!");
+         this.setVisible(true);
+         JPanel jp=new JPanel();         // Make check boxes.
+         JCheckBox jcbTranslate = new JCheckBox("Indonesian");
+         JCheckBox jcbFrench = new JCheckBox("French");
+         JCheckBox jcbGerman = new JCheckBox("German");
+         JCheckBox jcbChinese = new JCheckBox("Chinese");
+         jcbTranslate.setEnabled(true);
+         jcbFrench.setEnabled(true);   
+         jcbGerman.setEnabled(true); 
+         jcbChinese.setEnabled(true);
+         jp.add(jcbTranslate);
+         jp.add(jcbFrench);
+         jp.add(jcbGerman);
+         jp.add(jcbChinese);
+             this.add(jp);
+       }
+     public static void main(String[] args)      {
+         HelloFrame hf=new HelloFrame(); 
+     }
+} 
